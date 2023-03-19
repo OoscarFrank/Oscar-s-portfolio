@@ -29,139 +29,72 @@
       </q-avatar>
     </div>
 
-    <div class="q-pb-xl" style="background-color: #f2f2f2;">
-      <div class="q-pa-xl">
-        <span style="font-size: 25px;">Hard skills</span>
-        <div class="row flex flex-center">
-          <q-card class="col-12 col-md-2 q-ma-sm q-pt-sm q-mx-lg" flat style="background-color: #f2f2f2;">
-            <i class="" style="color: dark; font-size: larger; font-weight: lighter;">C</i>
-            <q-linear-progress class="progress-bar" color="primary" :value="0.9"></q-linear-progress>
-            <div class="progress-bar-container"></div>
-            <i class="" style="color: dark; font-size: larger; font-weight: lighter;">C++</i>
-            <q-linear-progress class="progress-bar" color="primary" :value="0.75"></q-linear-progress>
-            <div class="progress-bar-container"></div>
-            <i class="" style="color: dark; font-size: larger; font-weight: lighter;">Python</i>
-            <q-linear-progress class="progress-bar" color="primary" :value="0.77"></q-linear-progress>
-            <div class="progress-bar-container"></div><br>
-          </q-card>
-          <q-card class="col-12 col-md-2 q-ma-sm q-pt-sm q-mx-lg" flat style="background-color: #f2f2f2;">
-            <i class="" style="color: dark; font-size: larger; font-weight: lighter;">Vuejs</i>
-            <q-linear-progress class="progress-bar" color="primary" :value="0.85"></q-linear-progress>
-            <div class="progress-bar-container"></div>
-            <i class="" style="color: dark; font-size: larger; font-weight: lighter;">HTML/CSS</i>
-            <q-linear-progress class="progress-bar" color="primary" :value="0.82"></q-linear-progress>
-            <div class="progress-bar-container"></div>
-            <i class="" style="color: dark; font-size: larger; font-weight: lighter;">SwiftUI</i>
-            <q-linear-progress class="progress-bar" color="primary" :value="0.8"></q-linear-progress>
-            <div class="progress-bar-container"></div><br>
-          </q-card>
-          <q-card class="col-12 col-md-2 q-ma-sm q-pt-sm q-mx-lg" flat style="background-color: #f2f2f2;">
-            <i class="" style="color: dark; font-size: larger; font-weight: lighter;">Haskell</i>
-            <q-linear-progress class="progress-bar" color="primary" :value="0.7"></q-linear-progress>
-            <div class="progress-bar-container"></div>
-            <i class="" style="color: dark; font-size: larger; font-weight: lighter;">Assembly</i>
-            <q-linear-progress class="progress-bar" color="primary" :value="0.65"></q-linear-progress>
-            <div class="progress-bar-container"></div>
-            <i class="" style="color: dark; font-size: larger; font-weight: lighter;">Shell</i>
-            <q-linear-progress class="progress-bar" color="primary" :value="0.6"></q-linear-progress>
-            <div class="progress-bar-container"></div><br>
-          </q-card>
-        </div>
+    <div class="q-pa-xl" style="background-color: #f2f2f2;">
+      <div class="flex flex-center q-ma-sm">
+        <span style="font-size: 25px;">Programming langages</span>
       </div>
       <div class="col flex flex-center col-12 col-md-12">
-        <q-card class="col-12 col-md-1 q-ma-sm flex flex-center q-pt-sm" style="flex-direction: column; border-radius: 20px;" flat>
+        <q-card v-for="lang in langages" :key="lang" class="col-12 col-md-1 q-ma-sm flex flex-center q-pt-sm" style="flex-direction: column; border-radius: 20px;" flat>
           <div class="flex flex-center">
-            <q-img src="src/assets/linux.png" style="width: 50px;" class="q-mx-xl"></q-img>
+            <q-img :src="lang.img" style="width: 50px;" class="q-mx-xl"></q-img>
           </div>
-          <p style="font-size: 13px;" class="q-mxlg q-mt-lg">Linux</p>
+          <p style="font-size: 13px;" class="q-mxlg q-mt-lg">{{ lang.name }}</p>
         </q-card>
-        <q-card class="col-12 col-md-1 q-ma-sm flex flex-center q-pt-sm" style="flex-direction: column; border-radius: 20px;" flat>
+      </div>
+
+      <div class="flex flex-center q-ma-sm">
+        <span style="font-size: 25px;">Softwares & Tools</span>
+      </div>
+      <div class="col flex flex-center col-12 col-md-12">
+        <q-card v-for="soft in softwares" :key="soft" class="col-12 col-md-1 q-ma-sm flex flex-center q-pt-sm" style="flex-direction: column; border-radius: 20px;" flat>
           <div class="flex flex-center">
-            <q-img src="src/assets/vcode.png" style="width: 50px;" class="q-mx-xl"></q-img>
+            <q-img :src="soft.img" style="width: 50px;" class="q-mx-xl"></q-img>
           </div>
-          <p style="font-size: 13px;" class="q-mxlg q-mt-lg">VS Code</p>
-        </q-card>
-        <q-card class="col-12 col-md-1 q-ma-sm flex flex-center q-pt-sm" style="flex-direction: column; border-radius: 20px;" flat>
-          <div class="flex flex-center">
-            <q-img src="src/assets/postman.png" style="width: 50px;" class="q-mx-xl"></q-img>
-          </div>
-          <p style="font-size: 13px;" class="q-mxlg q-mt-lg">Postman</p>
-        </q-card>
-        <q-card class="col-12 col-md-1 q-ma-sm flex flex-center q-pt-sm" style="flex-direction: column; border-radius: 20px;" flat>
-          <div class="flex flex-center">
-            <q-img src="src/assets/ovh.png" style="width: 50px;" class="q-mx-xl"></q-img>
-          </div>
-          <p style="font-size: 13px;" class="q-mxlg q-mt-lg">OVH</p>
-        </q-card>
-        <q-card class="col-12 col-md-1 q-ma-sm flex flex-center q-pt-sm" style="flex-direction: column; border-radius: 20px;" flat>
-          <div class="flex flex-center">
-            <q-img src="src/assets/gimp.png" style="width: 50px;" class="q-mx-xl"></q-img>
-          </div>
-          <p style="font-size: 13px;" class="q-mxlg q-mt-lg">Gimp</p>
-        </q-card>
-        <q-card class="col-12 col-md-1 q-ma-sm flex flex-center q-pt-sm" style="flex-direction: column; border-radius: 20px;" flat>
-          <div class="flex flex-center">
-            <q-img src="src/assets/adobexd.png" style="width: 50px;" class="q-mx-xl"></q-img>
-          </div>
-          <p style="font-size: 13px;" class="q-mxlg q-mt-lg">Adobe XD</p>
-        </q-card>
-        <q-card class="col-12 col-md-1 q-ma-sm flex flex-center q-pt-sm" style="flex-direction: column; border-radius: 20px;" flat>
-          <div class="flex flex-center">
-            <q-img src="src/assets/figma.png" style="width: 50px;" class="q-mx-xl"></q-img>
-          </div>
-          <p style="font-size: 13px;" class="q-mxlg q-mt-lg">Figma</p>
-        </q-card>
-        <q-card class="col-12 col-md-1 q-ma-sm flex flex-center q-pt-sm" style="flex-direction: column; border-radius: 20px;" flat>
-          <div class="flex flex-center">
-            <q-img src="src/assets/office365.png" style="width: 50px;" class="q-mx-xl"></q-img>
-          </div>
-          <p style="font-size: 13px;" class="q-mxlg q-mt-lg">Microsoft 365</p>
+          <p style="font-size: 13px;" class="q-mxlg q-mt-lg">{{ soft.name }}</p>
         </q-card>
       </div>
     </div>
 
-    <div class="q-pb-xl">
-      <div class="q-pa-xl">
-        <span style="font-size: 25px;">Pathway</span>
-        <div class="row flex flex-center">
-          <q-card class="col-12 col-md-3 q-ma-sm q-pt-sm flex flex-center" flat>
-            <q-timeline color="black" style="position: relative;" class="text-black">
-              <i style="font-size: 20px">Education</i>
-              <q-timeline-entry>
-                <template v-slot:subtitle>2014 - 2018</template>
-                <template v-slot:title>College Jeanne d'Arc</template>
-                <div style="color: dark; font-size: larger; font-weight: lighter;">- Obtaining the patent</div>
-              </q-timeline-entry>
-              <q-timeline-entry>
-                <i style="font-size: 17px; text-h6"> </i>
-                <template v-slot:subtitle>2018 - 2021</template>
-                <template v-slot:title>Lycée Saint Joseph De Cluny</template>
-                <div style="color: dark; font-size: larger; font-weight: lighter;">- 1st year in Management and Administration<br/>- 2nd and last year in STMG field<br/>- Obtaining STMG Baccalaureate</div>
-              </q-timeline-entry>
-              <q-timeline-entry>
-                <template v-slot:subtitle>2021 - 2022</template>
-                <template v-slot:title>Epitech</template>
-                <div style="color: dark; font-size: larger; font-weight: lighter;">- First year<br/>- Second year in progress with 3.19 as GPA</div>
-              </q-timeline-entry>
-            </q-timeline>
-          </q-card>
-          <q-card class="col-12 col-md-3 q-ma-sm q-pt-sm flex flex-center" flat>
-            <q-timeline color="black" style="position: relative;" class="text-black">
-            <i style="font-size: 20px">Experience</i>
+    <div class="q-pa-xl">
+      <span style="font-size: 25px;">Pathway</span>
+      <div class="row flex flex-center">
+        <q-card class="col-12 col-md-3 q-ma-sm q-pt-sm flex flex-center" flat>
+          <q-timeline color="black" style="position: relative;" class="text-black">
+            <i style="font-size: 20px">Education</i>
+            <q-timeline-entry>
+              <template v-slot:subtitle>2014 - 2018</template>
+              <template v-slot:title>College Jeanne d'Arc</template>
+              <div style="color: dark; font-size: larger; font-weight: lighter;">- Obtaining the patent</div>
+            </q-timeline-entry>
             <q-timeline-entry>
               <i style="font-size: 17px; text-h6"> </i>
-              <template v-slot:subtitle>June 2019</template>
-              <template v-slot:title>ACE - Accounting firm</template>
-              <div style="color: dark; font-size: larger; font-weight: lighter;">- Development of financial models with the sales and accounting teams,<br/>- Calculation of monthly salaries, taking into account overtime, vacations...</div>
+              <template v-slot:subtitle>2018 - 2021</template>
+              <template v-slot:title>Lycée Saint Joseph De Cluny</template>
+              <div style="color: dark; font-size: larger; font-weight: lighter;">- 1st year in Management and Administration<br/>- 2nd and last year in STMG field<br/>- Obtaining STMG Baccalaureate</div>
             </q-timeline-entry>
             <q-timeline-entry>
-              <template v-slot:subtitle>August - December 2022</template>
-              <template v-slot:title>Apliko - digital creations</template>
-              <div style="color: dark; font-size: larger; font-weight: lighter;">- Development of an application in Vuejs using different features such as API calls, local storage, redirections...<br>- Creation of a mockup for a shop online<br></div>
+              <template v-slot:subtitle>2021 - 2022</template>
+              <template v-slot:title>Epitech</template>
+              <div style="color: dark; font-size: larger; font-weight: lighter;">- First year<br/>- Second year in progress with 3.19 as GPA</div>
             </q-timeline-entry>
-            </q-timeline>
-          </q-card>
-        </div>
+          </q-timeline>
+        </q-card>
+        <q-card class="col-12 col-md-3 q-ma-sm q-pt-sm flex flex-center" flat>
+          <q-timeline color="black" style="position: relative;" class="text-black">
+          <i style="font-size: 20px">Experience</i>
+          <q-timeline-entry>
+            <i style="font-size: 17px; text-h6"> </i>
+            <template v-slot:subtitle>June 2019</template>
+            <template v-slot:title>ACE - Accounting firm</template>
+            <div style="color: dark; font-size: larger; font-weight: lighter;">- Development of financial models with the sales and accounting teams,<br/>- Calculation of monthly salaries, taking into account overtime, vacations...</div>
+          </q-timeline-entry>
+          <q-timeline-entry>
+            <template v-slot:subtitle>August - December 2022</template>
+            <template v-slot:title>Apliko - digital creations</template>
+            <div style="color: dark; font-size: larger; font-weight: lighter;">- Development of an application in Vuejs using different features such as API calls, local storage, redirections...<br>- Creation of a mockup for a shop online<br></div>
+          </q-timeline-entry>
+          </q-timeline>
+        </q-card>
       </div>
     </div>
 
@@ -209,6 +142,27 @@ export default defineComponent({
     //   paragraph.innerHTML = newContent;
     // });
     return {
+      langages: [
+        {img: "src/assets/langages/C.png", name: "C"},
+        {img: "src/assets/langages/cpp.png", name: "C++"},
+        {img: "src/assets/langages/python.png", name: "Python"},
+        {img: "src/assets/langages/vuejs.png", name: "Vuejs"},
+        {img: "src/assets/langages/html.png", name: "HTML"},
+        {img: "src/assets/langages/css.png", name: "CSS"},
+        {img: "src/assets/langages/swiftui.png", name: "SwiftUI"},
+        {img: "src/assets/langages/haskell.png", name: "Haskell"},
+      ],
+      softwares: [
+        {img: "src/assets/softwares/linux.png", name: "Linux"},
+        {img: "src/assets/softwares/vcode.png", name: "Visual Studio"},
+        {img: "src/assets/softwares/github.png", name: "Github"},
+        {img: "src/assets/softwares/postman.png", name: "Postman"},
+        {img: "src/assets/softwares/ovh.png", name: "OVH"},
+        {img: "src/assets/softwares/gimp.png", name: "Gimp"},
+        {img: "src/assets/softwares/adobexd.png", name: "Adobe XD"},
+        {img: "src/assets/softwares/figma.png", name: "Figma"},
+        {img: "src/assets/softwares/office365.png", name: "Microsft 365"},
+      ],
       tab: ref("tab2"),
       dropdownItems: [
         { label: "HOME" },
