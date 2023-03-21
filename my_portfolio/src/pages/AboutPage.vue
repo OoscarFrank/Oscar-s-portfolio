@@ -29,79 +29,85 @@
       </q-avatar>
     </div>
 
-    <div class="q-pa-xl" style="background-color: #f2f2f2;">
-      <div class="flex flex-center q-ma-sm">
-        <span style="font-size: 25px;">Programming langages</span>
+    <div style="background-color: #f2f2f2;">
+      <div class="flex flex-center">
+        <span class="q-mt-lg" style="font-size: x-large; font-weight: lighter;">Hard skills</span>
       </div>
-      <div class="col flex flex-center col-12 col-md-12">
-        <q-card v-for="lang in langages" :key="lang" class="col-12 col-md-1 q-ma-sm flex flex-center q-pt-sm" style="flex-direction: column; border-radius: 20px;" flat>
-          <div class="flex flex-center">
-            <q-img :src="lang.img" style="width: 50px;" class="q-mx-xl"></q-img>
-          </div>
-          <p style="font-size: 13px;" class="q-mxlg q-mt-lg">{{ lang.name }}</p>
-        </q-card>
-      </div>
-
-      <div class="flex flex-center q-ma-sm">
-        <span style="font-size: 25px;">Softwares & Tools</span>
-      </div>
-      <div class="col flex flex-center col-12 col-md-12">
-        <q-card v-for="soft in softwares" :key="soft" class="col-12 col-md-1 q-ma-sm flex flex-center q-pt-sm" style="flex-direction: column; border-radius: 20px;" flat>
-          <div class="flex flex-center">
-            <q-img :src="soft.img" style="width: 50px;" class="q-mx-xl"></q-img>
-          </div>
-          <p style="font-size: 13px;" class="q-mxlg q-mt-lg">{{ soft.name }}</p>
-        </q-card>
+      <div class="row flex flex-center">
+        <div class="col-12 col-md-5 flex flex-center q-ma-lg">
+          <q-card v-for="lang in langages" :key="lang" class="col-12 col-md-1 q-ma-sm flex flex-center q-pt-sm" style="flex-direction: column; border-radius: 20px;" flat>
+            <div class="flex flex-center">
+              <q-img :src="lang.img" style="width: 50px;" class="q-mx-xl"></q-img>
+            </div>
+            <p style="font-size: 13px;" class="q-mxlg q-mt-lg">{{ lang.name }}</p>
+          </q-card>
+        </div>
+        <div class="col-12 col-md-5 flex flex-center q-ma-lg">
+          <q-card v-for="soft in softwares" :key="soft" class="col-12 col-md-1 q-ma-sm flex flex-center q-pt-sm" style="flex-direction: column; border-radius: 20px;" flat>
+            <div class="flex flex-center">
+              <q-img :src="soft.img" style="width: 50px;" class="q-mx-xl"></q-img>
+            </div>
+            <p style="font-size: 13px;" class="q-mxlg q-mt-lg">{{ soft.name }}</p>
+          </q-card>
+        </div>
       </div>
     </div>
 
-    <div class="q-pa-xl">
-      <span style="font-size: 25px;">Pathway</span>
+    <div>
+      <div class="flex flex-center">
+        <span class="q-mt-lg" style="font-size: x-large; font-weight: lighter;">Pathway</span>
+      </div>
       <div class="row flex flex-center">
-        <q-card class="col-12 col-md-3 q-ma-sm q-pt-sm flex flex-center" flat>
-          <q-timeline color="black" style="position: relative;" class="text-black">
-            <i style="font-size: 20px">Education</i>
-            <q-timeline-entry>
-              <template v-slot:subtitle>2014 - 2018</template>
-              <template v-slot:title>College Jeanne d'Arc</template>
-              <div style="color: dark; font-size: larger; font-weight: lighter;">- Obtaining the patent</div>
-            </q-timeline-entry>
+        <div class="col-12 col-md-5 flex flex-center q-ma-lg">
+          <q-card class="col-12 col-md-3 q-ma-sm q-pt-sm flex flex-center" flat>
+            <q-timeline color="black" style="position: relative;" class="text-black">
+              <i style="font-size: 20px">Education</i>
+              <q-timeline-entry>
+                <template v-slot:subtitle>2014 - 2018</template>
+                <template v-slot:title>College Jeanne d'Arc</template>
+                <div style="color: dark; font-size: larger; font-weight: lighter;">- Obtaining the patent</div>
+              </q-timeline-entry>
+              <q-timeline-entry>
+                <i style="font-size: 17px; text-h6"> </i>
+                <template v-slot:subtitle>2018 - 2021</template>
+                <template v-slot:title>Lycée Saint Joseph De Cluny</template>
+                <div style="color: dark; font-size: larger; font-weight: lighter;">- 1st year in Management and Administration<br/>- 2nd and last year in STMG field<br/>- Obtaining STMG Baccalaureate</div>
+              </q-timeline-entry>
+              <q-timeline-entry>
+                <template v-slot:subtitle>2021 - 2022</template>
+                <template v-slot:title>Epitech</template>
+                <div style="color: dark; font-size: larger; font-weight: lighter;">- First year<br/>- Second year in progress with 3.19 as GPA</div>
+              </q-timeline-entry>
+            </q-timeline>
+          </q-card>
+        </div>
+        <div class="col-12 col-md-5 flex flex-center q-ma-lg">
+          <q-card class="col-12 col-md-3 q-ma-sm q-pt-sm flex flex-center" flat>
+            <q-timeline color="black" style="position: relative;" class="text-black">
+            <i style="font-size: 20px">Experience</i>
             <q-timeline-entry>
               <i style="font-size: 17px; text-h6"> </i>
-              <template v-slot:subtitle>2018 - 2021</template>
-              <template v-slot:title>Lycée Saint Joseph De Cluny</template>
-              <div style="color: dark; font-size: larger; font-weight: lighter;">- 1st year in Management and Administration<br/>- 2nd and last year in STMG field<br/>- Obtaining STMG Baccalaureate</div>
+              <template v-slot:subtitle>June 2019</template>
+              <template v-slot:title>ACE - Accounting firm</template>
+              <div style="color: dark; font-size: larger; font-weight: lighter;">- Development of financial models with the sales and accounting teams,<br/>- Calculation of monthly salaries, taking into account overtime, vacations...</div>
             </q-timeline-entry>
             <q-timeline-entry>
-              <template v-slot:subtitle>2021 - 2022</template>
-              <template v-slot:title>Epitech</template>
-              <div style="color: dark; font-size: larger; font-weight: lighter;">- First year<br/>- Second year in progress with 3.19 as GPA</div>
+              <template v-slot:subtitle>August - December 2022</template>
+              <template v-slot:title>Apliko - digital creations</template>
+              <div style="color: dark; font-size: larger; font-weight: lighter;">- Development of an application in Vuejs using different features such as API calls, local storage, redirections...<br>- Creation of a mockup for a shop online<br></div>
             </q-timeline-entry>
-          </q-timeline>
-        </q-card>
-        <q-card class="col-12 col-md-3 q-ma-sm q-pt-sm flex flex-center" flat>
-          <q-timeline color="black" style="position: relative;" class="text-black">
-          <i style="font-size: 20px">Experience</i>
-          <q-timeline-entry>
-            <i style="font-size: 17px; text-h6"> </i>
-            <template v-slot:subtitle>June 2019</template>
-            <template v-slot:title>ACE - Accounting firm</template>
-            <div style="color: dark; font-size: larger; font-weight: lighter;">- Development of financial models with the sales and accounting teams,<br/>- Calculation of monthly salaries, taking into account overtime, vacations...</div>
-          </q-timeline-entry>
-          <q-timeline-entry>
-            <template v-slot:subtitle>August - December 2022</template>
-            <template v-slot:title>Apliko - digital creations</template>
-            <div style="color: dark; font-size: larger; font-weight: lighter;">- Development of an application in Vuejs using different features such as API calls, local storage, redirections...<br>- Creation of a mockup for a shop online<br></div>
-          </q-timeline-entry>
-          </q-timeline>
-        </q-card>
+            </q-timeline>
+          </q-card>
+        </div>
       </div>
     </div>
 
-    <div class="q-pb-xl" style="background-color: #f2f2f2;">
-      <div class="q-pa-xl">
-        <span style="font-size: 25px;">Document</span>
-        <div class="row flex flex-center">
+    <div style="background-color: #f2f2f2;">
+      <div class="flex flex-center">
+        <span class="q-mt-lg" style="font-size: x-large; font-weight: lighter;">Document</span>
+      </div>
+      <div class="row flex flex-center">
+        <div class="col-12 col-md-12 flex flex-center q-ma-lg">
           <q-card class="col-12 col-md-6 q-ma-sm q-pt-sm flex flex-center" flat style="background-color: #f2f2f2;">
             <q-card style="background-color: #f2f2f2;">
               <span style="font-size: 20px;">If you are interested in my profile, you can discover it in more detail thanks to my CV present below...<br></span>
@@ -118,7 +124,6 @@
         </div>
       </div>
     </div>
-
 
   </q-page>
 </template>
@@ -157,7 +162,6 @@ export default defineComponent({
         {img: "src/assets/softwares/vcode.png", name: "Visual Studio"},
         {img: "src/assets/softwares/github.png", name: "Github"},
         {img: "src/assets/softwares/postman.png", name: "Postman"},
-        {img: "src/assets/softwares/ovh.png", name: "OVH"},
         {img: "src/assets/softwares/gimp.png", name: "Gimp"},
         {img: "src/assets/softwares/adobexd.png", name: "Adobe XD"},
         {img: "src/assets/softwares/figma.png", name: "Figma"},
