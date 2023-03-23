@@ -81,7 +81,7 @@
             </q-timeline>
           </q-card>
         </div>
-        <div class="col-12 col-md-5 flex flex-center q-ma-lg">
+        <div class="col-12 col-md-5 flex flex-center q-ma-lg q-pa-lg">
           <q-card class="col-12 col-md-3 q-ma-sm q-pt-sm flex flex-center" flat>
             <q-timeline color="black" style="position: relative;" class="text-black">
             <i style="font-size: 20px">Experience</i>
@@ -109,19 +109,31 @@
       <div class="row flex flex-center">
         <div class="col-12 col-md-12 flex flex-center q-ma-lg">
           <q-card class="col-12 col-md-6 q-ma-sm q-pt-sm flex flex-center" flat style="background-color: #f2f2f2;">
-            <q-card style="background-color: #f2f2f2;">
+            <q-card style="background-color: #f2f2f2; text-align: center;">
               <span style="font-size: 20px;">If you are interested in my profile, you can discover it in more detail thanks to my CV present below...<br></span>
               <div class="flex flex-center">
-                <q-btn class="q-ma-lg" style="width: 60%; background-color: #ffffff;" href="src/assets/CV Oscar FRANK.pdf" target="_blank">
-                  <q-tooltip>
-                    That's so kind :)
-                  </q-tooltip>
-                  See Oscar's CV
-                </q-btn>
+                <q-card class="flex flex-center q-ma-lg">
+                  <q-img src="src/assets/littleCV.png" class="q-ma-lg" style="max-width: 100%"></q-img>
+                  <q-btn flat style="background-color: #ffffff; width: 100%;" href="src/assets/CV Oscar FRANK.pdf" target="_blank">
+                    See Oscar's resume
+                  </q-btn>
+                </q-card>
               </div>
             </q-card>
           </q-card>
         </div>
+      </div>
+    </div>
+
+    <div class="bg-dark flex flex-center">
+      <div class="flex flex-center q-ma-sm">
+        <q-btn class="q-ma-sm text-white" flat @click="GoHomeVue();">Home</q-btn>
+        <span class="q-ma-sm text-white">|</span>
+        <q-btn class="q-ma-sm text-white" flat @click="GoAboutVue();">About</q-btn>
+        <span class="q-ma-sm text-white">|</span>
+        <q-btn class="q-ma-sm text-white" flat @click="GoProjectVue();">Porjects</q-btn>
+        <span class="q-ma-sm text-white">|</span>
+        <q-btn class="q-ma-sm text-white" flat>Contact</q-btn>
       </div>
     </div>
 

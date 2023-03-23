@@ -48,6 +48,18 @@
       </div>
     </div>
 
+    <div class="bg-dark flex flex-center">
+      <div class="flex flex-center q-ma-sm">
+        <q-btn class="q-ma-sm text-white" flat @click="GoHomeVue();">Home</q-btn>
+        <span class="q-ma-sm text-white">|</span>
+        <q-btn class="q-ma-sm text-white" flat @click="GoAboutVue();">About</q-btn>
+        <span class="q-ma-sm text-white">|</span>
+        <q-btn class="q-ma-sm text-white" flat @click="GoProjectVue();">Porjects</q-btn>
+        <span class="q-ma-sm text-white">|</span>
+        <q-btn class="q-ma-sm text-white" flat>Contact</q-btn>
+      </div>
+    </div>
+
   </q-page>
 </template>
 
