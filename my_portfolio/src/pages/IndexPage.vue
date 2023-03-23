@@ -1,5 +1,5 @@
 <template>
-  <q-page style="background-color: #ffffff;">
+  <q-page style="background-image: url('./src/assets/bkgHome.jpg');">
     <q-toolbar class="bg-dark text-white shadow-2 fixed-top" style="height: 80px; z-index: 999;">
       <h6 class="q-mx-lg">Home</h6>
       <q-space />
@@ -19,27 +19,37 @@
     <br>
     <br>
     <br>
-    <q-card flat class="flex flex-center q-ma-lg">
-      <span id="my-paragraph" class="text-center" style="font-size: 40px; font-weight: bolder;">Welcome</span>
-    </q-card>
-    <div class="row">
-      <div class="q-pa-xl col-12 col-md-7">
-        <q-card class="flex flex-center text-center" flat style="height: 100%; width: 100%; font-size: 20px;">
-          <span style="font-size: 25px;">Hi, I'm Oscar<br>Welcome to my portfolio</span>
-        </q-card>
+    <div class="flex flex-center">
+    </div>
+    <div class="q-pt-xl">
+      <div class="flex flex-center q-pa-lg"  style="background-color: transparent;">
+        <q-card class="animated-text q-pa-sm q-pt-sm" flat style="font-size: xx-large; background-color: transparent; color: white;">O</q-card>
+        <q-card class="animated-text q-pa-sm q-pt-sm" flat style="font-size: xx-large; background-color: transparent; color: white;">S</q-card>
+        <q-card class="animated-text q-pa-sm q-pt-sm" flat style="font-size: xx-large; background-color: transparent; color: white;">C</q-card>
+        <q-card class="animated-text q-pa-sm q-pt-sm" flat style="font-size: xx-large; background-color: transparent; color: white;">A</q-card>
+        <q-card class="animated-text q-pa-sm q-pt-sm" flat style="font-size: xx-large; background-color: transparent; color: white;">R</q-card>
       </div>
-      <div class="q-pa-lg col-12 col-md-5 flex flex-center">
-        <q-avatar
-          size="350px"
-          style="border-radius: 10%; box-shadow: 0px 3px 3px 3px black"
-        >
-          <img src="src/assets/memoji.png" />
-        </q-avatar>
+      <div class="flex flex-center q-pa-sm"  style="background-color: transparent;">
+        <span style="font-size: x-large; color: white;">
+          Welcome to my portfolio, have a good time!
+        </span>
       </div>
     </div>
-    <q-card class="flex flex-center text-center bg-dark" flat style="height: 100%; width: 100%; font-size: 20px; border-radius: 0%;">
-      <span id="my-paragraph">Hi, I'm Oscar<br>Welcome to my portfolio</span>
-    </q-card>
+
+    <div class="q-pa-lg flex flex-center fixed-bottom"  style="background-color: transparent;">
+      <q-btn flat class="q-mx-sm" href="https://github.com/OoscarFrank" target="_blank">
+        <q-icon style="color: white;" name="fa fa-github"></q-icon>
+      </q-btn>
+      <q-btn flat class="q-mx-sm" href="https://www.linkedin.com/in/oscar-frank/" target="_blank">
+        <q-icon style="color: white;" name="fa fa-linkedin"></q-icon>
+      </q-btn>
+      <q-btn flat class="q-mx-sm" href="mailto:oscar.frank@epitech.eu" target="_blank">
+        <q-icon style="color: white;" name="fa fa-envelope-circle-check" />
+      </q-btn>
+      <q-btn flat class="q-mx-sm" href="telto:+33651322365">
+        <q-icon style="color: white;" name="fa fa-mobile" />
+      </q-btn>
+    </div>
   </q-page>
 </template>
 
@@ -47,22 +57,18 @@
 import { defineComponent, onMounted } from "vue";
 import { ref } from "vue";
 import { useRouter } from "vue-router";
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 export default defineComponent({
   name: "IndexPage",
+  created() {
+    const faScript = document.createElement("script");
+    faScript.setAttribute("src", "https://kit.fontawesome.com/f8ca107b00.js");
+    faScript.setAttribute("crossorigin", "anonymous");
+    document.head.appendChild(faScript);
+  },
   setup() {
     const router = useRouter();
-
-    // onMounted(() => {
-    //   const paragraph = document.getElementById("my-paragraph");
-    //   const letters = paragraph.textContent.split("");
-    //   let newContent = "";
-    //   for (let i = 0; i < letters.length; i++) {
-    //     newContent += '<span>' + letters[i] + '</span>';
-    //   }
-    //   paragraph.innerHTML = newContent;
-    // });
-
     return {
       tab: ref("tab1"),
       dropdownItems: [
@@ -85,59 +91,23 @@ export default defineComponent({
 });
 </script>
 
-
-
 <style>
-@keyframes fall {
+/* main {
+  background-image: url('./src/assets/bkgHome.jpg');
+} */
+.animated-text {
+  animation: bounce 3s infinite;
+}
+
+@keyframes bounce {
   0% {
-    transform: translateY(-100%);
-    opacity: 0;
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0, -15px, 0);
   }
   100% {
-    transform: translateY(0);
-    opacity: 1;
+    transform: translate3d(0, 0, 0);
   }
 }
-
-#my-paragraph {
-  display: inline-block;
-}
-
-#my-paragraph span {
-  display: inline-block;
-  animation-name: fall;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
-  animation-timing-function: ease-in;
-  opacity: 0;
-}
-
-#my-paragraph span:nth-child(1) {
-  animation-delay: 0.1s;
-}
-
-#my-paragraph span:nth-child(2) {
-  animation-delay: 0.2s;
-}
-
-#my-paragraph span:nth-child(3) {
-  animation-delay: 0.3s;
-}
-
-#my-paragraph span:nth-child(4) {
-  animation-delay: 0.4s;
-}
-
-#my-paragraph span:nth-child(5) {
-  animation-delay: 0.5s;
-}
-
-#my-paragraph span:nth-child(6) {
-  animation-delay: 0.6s;
-}
-
-#my-paragraph span:nth-child(7) {
-  animation-delay: 0.7s;
-}
-
 </style>

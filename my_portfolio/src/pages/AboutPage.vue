@@ -1,5 +1,5 @@
 <template>
-  <q-page style="background-color: #ffffff;">
+  <q-page style="background-color: #2d2d2d;">
     <q-toolbar class="bg-dark text-white shadow-2 fixed-top" style="height: 80px; z-index: 999;">
       <h6 class="q-mx-lg">About</h6>
       <q-space />
@@ -19,35 +19,35 @@
     <br>
     <br>
     <br>
-    <q-card flat class="flex flex-center q-ma-lg">
-      <span id="my-paragraph" class="text-center" style="font-size: 40px; font-weight: bolder;">About me</span>
+    <q-card flat class="flex flex-center q-ma-lg" style="background-color: transparent;">
+      <span id="my-paragraph" class="text-center" style="font-size: 40px; font-weight: lighter; color: white;">About me</span>
     </q-card>
 
     <div class="flex flex-center">
       <q-avatar size="250px" style="border-radius: 10%;">
-        <img src="src/assets/profile.png" />
+        <img src="src/assets/projectMemo.png" />
       </q-avatar>
     </div>
 
-    <div style="background-color: #f2f2f2;">
+    <div style="background-color: #3d3d3d;">
       <div class="flex flex-center">
-        <span class="q-mt-lg" style="font-size: x-large; font-weight: lighter;">Hard skills</span>
+        <span class="q-mt-lg" style="font-size: x-large; font-weight: lighter; color: white;">Hard skills</span>
       </div>
       <div class="row flex flex-center">
         <div class="col-12 col-md-5 flex flex-center q-ma-lg">
-          <q-card v-for="lang in langages" :key="lang" class="col-12 col-md-1 q-ma-sm flex flex-center q-pt-sm" style="flex-direction: column; border-radius: 20px;" flat>
+          <q-card v-for="lang in langages" :key="lang" class="col-12 col-md-1 q-ma-sm flex flex-center q-pt-sm" style="flex-direction: column; border-radius: 20px; background-color: #4d4d4d;" flat>
             <div class="flex flex-center">
               <q-img :src="lang.img" style="width: 50px;" class="q-mx-xl"></q-img>
             </div>
-            <p style="font-size: 13px;" class="q-mxlg q-mt-lg">{{ lang.name }}</p>
+            <p style="font-size: 13px; color: white;" class="q-mxlg q-mt-lg">{{ lang.name }}</p>
           </q-card>
         </div>
         <div class="col-12 col-md-5 flex flex-center q-ma-lg">
-          <q-card v-for="soft in softwares" :key="soft" class="col-12 col-md-1 q-ma-sm flex flex-center q-pt-sm" style="flex-direction: column; border-radius: 20px;" flat>
+          <q-card v-for="soft in softwares" :key="soft" class="col-12 col-md-1 q-ma-sm flex flex-center q-pt-sm" style="flex-direction: column; border-radius: 20px; background-color: #4d4d4d;" flat>
             <div class="flex flex-center">
               <q-img :src="soft.img" style="width: 50px;" class="q-mx-xl"></q-img>
             </div>
-            <p style="font-size: 13px;" class="q-mxlg q-mt-lg">{{ soft.name }}</p>
+            <p style="font-size: 13px; color: white;" class="q-mxlg q-mt-lg">{{ soft.name }}</p>
           </q-card>
         </div>
       </div>
@@ -55,12 +55,12 @@
 
     <div>
       <div class="flex flex-center">
-        <span class="q-mt-lg" style="font-size: x-large; font-weight: lighter;">Pathway</span>
+        <span class="q-mt-lg" style="font-size: x-large; font-weight: lighter; color: white;">Pathway</span>
       </div>
       <div class="row flex flex-center">
         <div class="col-12 col-md-5 flex flex-center q-ma-lg">
-          <q-card class="col-12 col-md-3 q-ma-sm q-pt-sm flex flex-center" flat>
-            <q-timeline color="black" style="position: relative;" class="text-black">
+          <q-card class="col-12 col-md-3 q-ma-sm q-pt-sm flex flex-center" flat style="background-color: #2d2d2d;">
+            <q-timeline color="white" style="position: relative;" class="text-white">
               <i style="font-size: 20px">Education</i>
               <q-timeline-entry>
                 <template v-slot:subtitle>2014 - 2018</template>
@@ -82,8 +82,8 @@
           </q-card>
         </div>
         <div class="col-12 col-md-5 flex flex-center q-ma-lg q-pa-lg">
-          <q-card class="col-12 col-md-3 q-ma-sm q-pt-sm flex flex-center" flat>
-            <q-timeline color="black" style="position: relative;" class="text-black">
+          <q-card class="col-12 col-md-3 q-ma-sm q-pt-sm flex flex-center" flat style="background-color: #2d2d2d;">
+            <q-timeline color="white" style="position: relative;" class="text-white">
             <i style="font-size: 20px">Experience</i>
             <q-timeline-entry>
               <i style="font-size: 17px; text-h6"> </i>
@@ -102,20 +102,20 @@
       </div>
     </div>
 
-    <div style="background-color: #f2f2f2;">
+    <div style="background-color: #3d3d3d;">
       <div class="flex flex-center">
-        <span class="q-mt-lg" style="font-size: x-large; font-weight: lighter;">Document</span>
+        <span class="q-mt-lg" style="font-size: x-large; font-weight: lighter; color: white;">Document</span>
       </div>
       <div class="row flex flex-center">
         <div class="col-12 col-md-12 flex flex-center q-ma-lg">
-          <q-card class="col-12 col-md-6 q-ma-sm q-pt-sm flex flex-center" flat style="background-color: #f2f2f2;">
-            <q-card style="background-color: #f2f2f2; text-align: center;">
-              <span style="font-size: 20px;">If you are interested in my profile, you can discover it in more detail thanks to my CV present below...<br></span>
+          <q-card class="col-12 col-md-6 q-ma-sm q-pt-sm flex flex-center" flat style="background-color: #3d3d3d;">
+            <q-card style="background-color: #3d3d3d; text-align: center;">
+              <span style="font-size: 20px; color: white;">If you are interested in my profile, you can discover it in more detail thanks to my CV present below...<br></span>
               <div class="flex flex-center">
                 <q-card class="flex flex-center q-ma-lg">
                   <q-img src="src/assets/littleCV.png" class="q-ma-lg" style="max-width: 100%"></q-img>
-                  <q-btn flat style="background-color: #ffffff; width: 100%;" href="src/assets/CV Oscar FRANK.pdf" target="_blank">
-                    See Oscar's resume
+                  <q-btn flat style="background-color: #3d3d3d; width: 100%;" href="src/assets/CV Oscar FRANK.pdf" target="_blank">
+                    <span style="color: white;">See Oscar's resume</span>
                   </q-btn>
                 </q-card>
               </div>
@@ -149,15 +149,6 @@ export default defineComponent({
   name: "AboutPage",
   setup() {
     const router = useRouter();
-    // onMounted(() => {
-    //   const paragraph = document.getElementById("my-paragraph");
-    //   const letters = paragraph.textContent.split(/[\s]+/);
-    //   let newContent = "";
-    //   for (let i = 0; i < letters.length; i++) {
-    //     newContent += '<span>' + letters[i] + '</span> ';
-    //   }
-    //   paragraph.innerHTML = newContent;
-    // });
     return {
       langages: [
         {img: "src/assets/langages/C.png", name: "C"},
@@ -223,46 +214,6 @@ export default defineComponent({
   animation-fill-mode: forwards;
   animation-timing-function: ease-in;
   opacity: 0;
-}
-
-#my-paragraph span:nth-child(1) {
-  animation-delay: 0.1s;
-}
-
-#my-paragraph span:nth-child(2) {
-  animation-delay: 0.2s;
-}
-
-#my-paragraph span:nth-child(3) {
-  animation-delay: 0.3s;
-}
-
-#my-paragraph span:nth-child(4) {
-  animation-delay: 0.4s;
-}
-
-#my-paragraph span:nth-child(5) {
-  animation-delay: 0.5s;
-}
-
-#my-paragraph span:nth-child(6) {
-  animation-delay: 0.6s;
-}
-
-#my-paragraph span:nth-child(7) {
-  animation-delay: 0.7s;
-}
-
-#my-paragraph span:nth-child(8) {
-  animation-delay: 0.8s;
-}
-
-#my-paragraph span:nth-child(9) {
-  animation-delay: 0.9s;
-}
-
-#my-paragraph span:nth-child(10) {
-  animation-delay: 1.0s;
 }
 
 .progress-bar-container {
