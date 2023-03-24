@@ -25,7 +25,7 @@
 
     <div class="flex flex-center">
       <q-avatar size="250px" style="border-radius: 10%;">
-        <img src="src/assets/profile.png" />
+        <img src="/profile.png" />
       </q-avatar>
     </div>
 
@@ -68,7 +68,7 @@
         <span class="q-ma-sm text-white">|</span>
         <q-btn class="q-ma-sm text-white" flat @click="GoAboutVue();">About</q-btn>
         <span class="q-ma-sm text-white">|</span>
-        <q-btn class="q-ma-sm text-white" flat @click="GoProjectVue();">Porjects</q-btn>
+        <q-btn class="q-ma-sm text-white" flat @click="GoProjectVue();">Projects</q-btn>
         <span class="q-ma-sm text-white">|</span>
         <q-btn class="q-ma-sm text-white" flat>Contact</q-btn>
       </div>

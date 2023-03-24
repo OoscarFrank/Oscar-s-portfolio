@@ -25,7 +25,7 @@
 
     <div class="flex flex-center">
       <q-avatar size="250px" style="border-radius: 10%;">
-        <img src="src/assets/projectMemo.png" />
+        <img src="/projectMemo.png" />
       </q-avatar>
     </div>
 
@@ -113,8 +113,8 @@
               <span style="font-size: 20px; color: white;">If you are interested in my profile, you can discover it in more detail thanks to my CV present below...<br></span>
               <div class="flex flex-center">
                 <q-card class="flex flex-center q-ma-lg">
-                  <q-img src="src/assets/littleCV.png" class="q-ma-lg" style="max-width: 100%"></q-img>
-                  <q-btn flat style="background-color: #3d3d3d; width: 100%;" href="src/assets/CV Oscar FRANK.pdf" target="_blank">
+                  <q-img src="/littleCV.png" class="q-ma-lg" style="max-width: 100%"></q-img>
+                  <q-btn flat style="background-color: #3d3d3d; width: 100%;" href="./CV Oscar FRANK.pdf" target="_blank">
                     <span style="color: white;">See Oscar's resume</span>
                   </q-btn>
                 </q-card>
@@ -131,7 +131,7 @@
         <span class="q-ma-sm text-white">|</span>
         <q-btn class="q-ma-sm text-white" flat @click="GoAboutVue();">About</q-btn>
         <span class="q-ma-sm text-white">|</span>
-        <q-btn class="q-ma-sm text-white" flat @click="GoProjectVue();">Porjects</q-btn>
+        <q-btn class="q-ma-sm text-white" flat @click="GoProjectVue();">Projects</q-btn>
         <span class="q-ma-sm text-white">|</span>
         <q-btn class="q-ma-sm text-white" flat>Contact</q-btn>
       </div>
@@ -151,24 +151,24 @@ export default defineComponent({
     const router = useRouter();
     return {
       langages: [
-        {img: "src/assets/langages/C.png", name: "C"},
-        {img: "src/assets/langages/cpp.png", name: "C++"},
-        {img: "src/assets/langages/python.png", name: "Python"},
-        {img: "src/assets/langages/vuejs.png", name: "Vuejs"},
-        {img: "src/assets/langages/html.png", name: "HTML"},
-        {img: "src/assets/langages/css.png", name: "CSS"},
-        {img: "src/assets/langages/swiftui.png", name: "SwiftUI"},
-        {img: "src/assets/langages/haskell.png", name: "Haskell"},
+        {img: "/langages/C.png", name: "C"},
+        {img: "/langages/cpp.png", name: "C++"},
+        {img: "/langages/python.png", name: "Python"},
+        {img: "/langages/vuejs.png", name: "Vuejs"},
+        {img: "/langages/html.png", name: "HTML"},
+        {img: "/langages/css.png", name: "CSS"},
+        {img: "/langages/swiftui.png", name: "SwiftUI"},
+        {img: "/langages/haskell.png", name: "Haskell"},
       ],
       softwares: [
-        {img: "src/assets/softwares/linux.png", name: "Linux"},
-        {img: "src/assets/softwares/vcode.png", name: "Visual Studio"},
-        {img: "src/assets/softwares/github.png", name: "Github"},
-        {img: "src/assets/softwares/postman.png", name: "Postman"},
-        {img: "src/assets/softwares/gimp.png", name: "Gimp"},
-        {img: "src/assets/softwares/adobexd.png", name: "Adobe XD"},
-        {img: "src/assets/softwares/figma.png", name: "Figma"},
-        {img: "src/assets/softwares/office365.png", name: "Microsft 365"},
+        {img: "/softwares/linux.png", name: "Linux"},
+        {img: "/softwares/vcode.png", name: "Visual Studio"},
+        {img: "/softwares/github.png", name: "Github"},
+        {img: "/softwares/postman.png", name: "Postman"},
+        {img: "/softwares/gimp.png", name: "Gimp"},
+        {img: "/softwares/adobexd.png", name: "Adobe XD"},
+        {img: "/softwares/figma.png", name: "Figma"},
+        {img: "/softwares/office365.png", name: "Microsft 365"},
       ],
       tab: ref("tab2"),
       dropdownItems: [

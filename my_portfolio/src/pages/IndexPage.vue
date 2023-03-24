@@ -1,5 +1,5 @@
 <template>
-  <q-page style="background-image: url('./src/assets/bkgHome.jpg');">
+  <q-page style="background-image: url('/bkgHome.jpg');">
     <q-toolbar class="bg-dark text-white shadow-2 fixed-top" style="height: 80px; z-index: 999;">
       <h6 class="q-mx-lg">Home</h6>
       <q-space />
@@ -36,7 +36,7 @@
       </div>
     </div>
 
-    <div class="q-pa-lg flex flex-center fixed-bottom"  style="background-color: transparent;">
+    <div class="q-ma-lg q-pa-lg flex flex-center"  style="background-color: transparent;">
       <q-btn flat class="q-mx-sm" href="https://github.com/OoscarFrank" target="_blank">
         <q-icon style="color: white;" name="fa fa-github"></q-icon>
       </q-btn>
@@ -49,6 +49,11 @@
       <q-btn flat class="q-mx-sm" href="telto:+33651322365">
         <q-icon style="color: white;" name="fa fa-mobile" />
       </q-btn>
+    </div>
+    <div class="flex flex-center fixed-bottom">
+      <q-avatar class="animated-memoji" size="250px" style="border-radius: 0%;">
+        <img src="/memoWname.png" />
+      </q-avatar>
     </div>
   </q-page>
 </template>
@@ -92,11 +97,13 @@ export default defineComponent({
 </script>
 
 <style>
-/* main {
-  background-image: url('./src/assets/bkgHome.jpg');
-} */
+
 .animated-text {
   animation: bounce 3s infinite;
+}
+
+.animated-memoji {
+  animation: bounce2 8s;
 }
 
 @keyframes bounce {
@@ -110,4 +117,17 @@ export default defineComponent({
     transform: translate3d(0, 0, 0);
   }
 }
+
+@keyframes bounce2 {
+  0% {
+    transform: translate3d(0, 300px, 0);
+  }
+  50% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
 </style>
