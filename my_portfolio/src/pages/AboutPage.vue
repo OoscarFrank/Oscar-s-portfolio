@@ -7,13 +7,13 @@
         <q-tab @click="GoHomeVue();" class="q-px-lg" style="height: 80px;" v-if="$q.screen.width > 600" name="tab1" label="HOME" />
         <q-tab @click="GoAboutVue();" class="q-px-lg" style="height: 80px;" v-if="$q.screen.width > 600" name="tab2" label="ABOUT" />
         <q-tab @click="GoProjectVue();" class="q-px-lg" style="height: 80px;" v-if="$q.screen.width > 600" name="tab3" label="PROJECTS" />
-        <q-tab class="q-px-lg" style="height: 80px;" v-if="$q.screen.width > 600" name="tab4" label="CONTACT" />
+        <q-tab @click="GoContactVue()" class="q-px-lg" style="height: 80px;" v-if="$q.screen.width > 600" name="tab4" label="CONTACT" />
       </q-tabs>
       <q-btn-dropdown v-if="$q.screen.width < 600" icon="menu" style="height: 80px;" flat ref="dropdown">
         <q-item-label class="q-ma-lg" @click="GoHomeVue(); $refs.dropdown.hide()">HOME</q-item-label>
         <q-item-label class="q-ma-lg" @click="GoAboutVue(); $refs.dropdown.hide()">ABOUT</q-item-label>
         <q-item-label class="q-ma-lg" @click="GoProjectVue(); $refs.dropdown.hide()">PROJECTS</q-item-label>
-        <q-item-label class="q-ma-lg" @click="GoHomeVue(); $refs.dropdown.hide()">CONTACT</q-item-label>
+        <q-item-label class="q-ma-lg" @click="GoContactVue(); $refs.dropdown.hide()">CONTACT</q-item-label>
       </q-btn-dropdown>
     </q-toolbar>
     <br>
@@ -127,13 +127,10 @@
 
     <div class="bg-dark flex flex-center">
       <div class="flex flex-center q-ma-sm">
-        <q-btn class="q-ma-sm text-white" flat @click="GoHomeVue();">Home</q-btn>
-        <span class="q-ma-sm text-white">|</span>
-        <q-btn class="q-ma-sm text-white" flat @click="GoAboutVue();">About</q-btn>
-        <span class="q-ma-sm text-white">|</span>
-        <q-btn class="q-ma-sm text-white" flat @click="GoProjectVue();">Projects</q-btn>
-        <span class="q-ma-sm text-white">|</span>
-        <q-btn class="q-ma-sm text-white" flat>Contact</q-btn>
+        <q-btn class="text-white" flat @click="GoHomeVue();">Home</q-btn>
+        <q-btn class="text-white" flat @click="GoAboutVue();">About</q-btn>
+        <q-btn class="text-white" flat @click="GoProjectVue();">Projects</q-btn>
+        <q-btn class="text-white" flat @click="GoContactVue()">Contact</q-btn>
       </div>
     </div>
 
@@ -185,6 +182,9 @@ export default defineComponent({
       },
       GoProjectVue: () => {
         router.push("/ProjectPage");
+      },
+      GoContactVue: () => {
+        router.push("/ContactPage");
       },
     };
   },

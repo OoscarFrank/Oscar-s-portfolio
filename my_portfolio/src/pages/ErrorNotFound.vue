@@ -21,7 +21,7 @@
           size="350px"
           style="border-radius: 10%;"
         >
-          <img src="src/assets/nop.png" />
+          <img src="/nop.png" />
         </q-avatar>
         <q-card flat class="bg-white">
           <h4 class="text-dark">There's nothing here</h4>

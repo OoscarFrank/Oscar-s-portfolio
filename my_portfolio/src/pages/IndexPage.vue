@@ -7,13 +7,13 @@
         <q-tab @click="GoHomeVue();" class="q-px-lg" style="height: 80px;" v-if="$q.screen.width > 600" name="tab1" label="HOME" />
         <q-tab @click="GoAboutVue();" class="q-px-lg" style="height: 80px;" v-if="$q.screen.width > 600" name="tab2" label="ABOUT" />
         <q-tab @click="GoProjectVue();" class="q-px-lg" style="height: 80px;" v-if="$q.screen.width > 600" name="tab3" label="PROJECTS" />
-        <q-tab class="q-px-lg" style="height: 80px;" v-if="$q.screen.width > 600" name="tab4" label="CONTACT" />
+        <q-tab @click="GoContactVue()" class="q-px-lg" style="height: 80px;" v-if="$q.screen.width > 600" name="tab4" label="CONTACT" />
       </q-tabs>
       <q-btn-dropdown v-if="$q.screen.width < 600" icon="menu" style="height: 80px;" flat ref="dropdown">
         <q-item-label class="q-ma-lg" @click="GoHomeVue(); $refs.dropdown.hide()">HOME</q-item-label>
         <q-item-label class="q-ma-lg" @click="GoAboutVue(); $refs.dropdown.hide()">ABOUT</q-item-label>
         <q-item-label class="q-ma-lg" @click="GoProjectVue(); $refs.dropdown.hide()">PROJECTS</q-item-label>
-        <q-item-label class="q-ma-lg" @click="GoHomeVue(); $refs.dropdown.hide()">CONTACT</q-item-label>
+        <q-item-label class="q-ma-lg" @click="GoContactVue(); $refs.dropdown.hide()">CONTACT</q-item-label>
       </q-btn-dropdown>
     </q-toolbar>
     <br>
@@ -30,31 +30,43 @@
         <q-card class="animated-text q-pa-sm q-pt-sm" flat style="font-size: xx-large; background-color: transparent; color: white;">R</q-card>
       </div>
       <div class="flex flex-center q-pa-sm"  style="background-color: transparent;">
-        <span style="font-size: x-large; color: white;">
+        <span class="text-center" style="font-size: x-large; color: white;">
           Welcome to my portfolio, have a good time!
         </span>
       </div>
     </div>
 
     <div class="q-ma-lg q-pa-lg flex flex-center"  style="background-color: transparent;">
-      <q-btn flat class="q-mx-sm" href="https://github.com/OoscarFrank" target="_blank">
-        <q-icon style="color: white;" name="fa fa-github"></q-icon>
-      </q-btn>
-      <q-btn flat class="q-mx-sm" href="https://www.linkedin.com/in/oscar-frank/" target="_blank">
+      <q-btn flat href="https://www.linkedin.com/in/oscar-frank/" target="_blank">
         <q-icon style="color: white;" name="fa fa-linkedin"></q-icon>
       </q-btn>
-      <q-btn flat class="q-mx-sm" href="mailto:oscar.frank@epitech.eu" target="_blank">
-        <q-icon style="color: white;" name="fa fa-envelope-circle-check" />
+      <q-btn flat href="https://github.com/OoscarFrank" target="_blank">
+        <q-icon style="color: white;" name="fa fa-github"></q-icon>
       </q-btn>
-      <q-btn flat class="q-mx-sm" href="telto:+33651322365">
-        <q-icon style="color: white;" name="fa fa-mobile" />
+      <q-btn flat href="mailto:oscar.frank@epitech.eu" target="_blank">
+        <q-icon style="color: white;" name="fa fa-envelope-circle-check" />
       </q-btn>
     </div>
     <div class="flex flex-center fixed-bottom">
-      <q-avatar class="animated-memoji" size="250px" style="border-radius: 0%;">
+      <q-avatar class="avatar animated-memoji" size="250px" style="border-radius: 0%;" @click="popupOpen()">
         <img src="/memoWname.png" />
       </q-avatar>
     </div>
+
+    <q-dialog v-model="popup">
+      <q-card class="bg-grey-8 text-white">
+        <q-card-section class="row items-center q-pb-none">
+          <div class="text-h6">Hi I'm Oscar!</div>
+          <q-space />
+          <q-btn icon="close" flat round dense v-close-popup />
+        </q-card-section>
+
+        <q-card-section>
+          I am very happy to see you on my portfolio. I'm a student at Epitech, a french computer science school. I'm currently in my 3rd year of studies, enjoy your visit and if you are interested in me, you will find many ways to contact me.
+        </q-card-section>
+      </q-card>
+    </q-dialog>
+
   </q-page>
 </template>
 
@@ -74,6 +86,7 @@ export default defineComponent({
   },
   setup() {
     const router = useRouter();
+    const popup = ref(false);
     return {
       tab: ref("tab1"),
       dropdownItems: [
@@ -91,12 +104,24 @@ export default defineComponent({
       GoProjectVue: () => {
         router.push("/ProjectPage");
       },
+      GoContactVue: () => {
+        router.push("/ContactPage");
+      },
+      popupOpen: () => {
+        popup.value = true;
+        console.log(popup);
+      },
+      popup,
     };
   },
 });
 </script>
 
 <style>
+
+.avatar:hover{
+  cursor: pointer;
+}
 
 .animated-text {
   animation: bounce 3s infinite;
